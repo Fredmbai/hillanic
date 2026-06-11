@@ -92,13 +92,12 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone size={15} className="text-[#2D9E8E] mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-white/40">+254 700 000 000</p>
-                  <p className="text-sm text-white/40">+254 700 000 001</p>
+                  <p className="text-sm text-white/40">+254 725 475 443</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={15} className="text-[#2D9E8E] mt-0.5 flex-shrink-0" />
-                <p className="text-sm text-white/40">info@hillanic.co.ke</p>
+                <p className="text-sm text-white/40">info@hillanichealthcare.com</p>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={15} className="text-[#2D9E8E] mt-0.5 flex-shrink-0" />
@@ -107,7 +106,7 @@ export default function Footer() {
             </ul>
 
             <a
-              href="https://wa.me/254700000000?text=Hello%20Hillanic%20Health%20Care%2C%20I%20would%20like%20to%20book%20a%20consultation."
+              href="https://wa.me/254725475443?text=Hello%20Hillanic%20Health%20Care%2C%20I%20would%20like%20to%20book%20a%20consultation."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-[#20ba5a] transition-all"

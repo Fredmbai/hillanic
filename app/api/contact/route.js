@@ -26,7 +26,7 @@ export async function POST(request) {
 
     // Send email to Hillanic team
     await resend.emails.send({
-      from: 'Hillanic Website <noreply@hillanic.co.ke>', // ← Must be a verified Resend domain
+      from: 'Hillanic Website <noreply@hillanichealthcare.com>', // ← Must be a verified Resend domain
       to: [process.env.CONTACT_EMAIL],                   // ← The inbox that receives enquiries
       replyTo: email,
       subject: `New Enquiry from ${name}${service ? ` — ${service}` : ''}`,
@@ -89,7 +89,7 @@ export async function POST(request) {
 
     // Send confirmation to the sender
     await resend.emails.send({
-      from: 'Hillanic Health Care <noreply@hillanic.co.ke>',
+      from: 'Hillanic Health Care <noreply@hillanichealthcare.com>',
       to: [email],
       subject: 'We received your message — Hillanic Health Care',
       html: `
@@ -107,7 +107,7 @@ export async function POST(request) {
               If your matter is urgent, please reach us directly via WhatsApp for a faster response:
             </p>
             <div style="text-align: center; margin: 24px 0;">
-              <a href="https://wa.me/254700000000" style="display: inline-block; background: #25D366; color: white; font-size: 15px; font-weight: bold; padding: 14px 32px; border-radius: 50px; text-decoration: none;">
+              <a href="https://wa.me/254725475443" style="display: inline-block; background: #25D366; color: white; font-size: 15px; font-weight: bold; padding: 14px 32px; border-radius: 50px; text-decoration: none;">
                 Chat on WhatsApp
               </a>
             </div>
