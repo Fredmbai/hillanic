@@ -5,14 +5,17 @@ import { ArrowRight, Target, Eye } from 'lucide-react'
 export const metadata = {
   title: 'About Us',
   description:
-    'Hillanic Health Care Ltd is a registered Kenyan healthcare institution providing professional rehabilitation, mental health care, and psychosocial support. Learn about our mission, vision, and values.',
+    'Hillanic Health Care (Hillanic Healthcare) is a registered Kenyan rehabilitation center providing professional rehabilitation, mental health care, and psychosocial support. Learn about our mission, vision, and values.',
   keywords: [
     'about Hillanic Health Care',
+    'Hillanic Healthcare',
+    'rehabilitation center Kenya',
+    'rehabilitation center',
+    'mental health care Kenya',
+    'mental health hospital Kenya',
     'healthcare institution Kenya',
-    'rehabilitation center Nairobi',
-    'mental health clinic Kenya',
     'registered healthcare Kenya',
-    'counseling center Nairobi',
+    'counseling services Nairobi',
   ],
   alternates: { canonical: 'https://hillanic.co.ke/about' },
   openGraph: {
@@ -204,9 +207,10 @@ export default function AboutPage() {
             Ready to Take the First Step?
           </h2>
           <p className="text-[#5A6B7A] font-body mb-8">
-            Reach out to our team today — through WhatsApp for quick bookings or our contact form for detailed enquiries.
+            Reach out to our team today — send us a message and we'll respond within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* WhatsApp CTA — disabled until number is confirmed
             <a
               href={WA_HREF}
               target="_blank"
@@ -216,6 +220,7 @@ export default function AboutPage() {
             >
               <WaIcon /> Book via WhatsApp
             </a>
+            */}
             <Link href="/contact" className="btn-primary btn-navy">
               Contact Us <ArrowRight size={16} />
             </Link>

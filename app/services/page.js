@@ -5,11 +5,13 @@ import { ArrowRight } from 'lucide-react'
 export const metadata = {
   title: 'Our Services',
   description:
-    'Hillanic Health Care offers 7 professional programs: drug & substance rehabilitation, mental health care, counseling, community outreach, youth support, reintegration, and home-based aftercare in Kenya.',
+    'Hillanic Health Care, a rehabilitation center and mental health care provider in Kenya, offers 7 professional programs: drug & substance rehabilitation, mental health care, counseling, community outreach, youth support, reintegration, and home-based aftercare.',
   keywords: [
+    'rehabilitation center Kenya',
+    'rehabilitation center',
     'drug rehabilitation Kenya',
-    'substance abuse rehab Nairobi',
-    'mental health services Kenya',
+    'mental health care Kenya',
+    'mental health hospital Kenya',
     'counseling services Nairobi',
     'youth mental health Kenya',
     'community outreach Kenya',
@@ -195,7 +197,8 @@ export default function ServicesPage() {
             {services.map(({ id, emoji, title, shortDesc, fullDesc, features }, i) => (
               <div
                 key={id}
-                className={`bg-white rounded-3xl border border-[#E2EBF0] overflow-hidden card-hover border-hover group ${i % 2 === 0 ? 'reveal-left' : 'reveal-right'}`}
+                id={id}
+                className={`scroll-mt-24 bg-white rounded-3xl border border-[#E2EBF0] overflow-hidden card-hover border-hover group ${i % 2 === 0 ? 'reveal-left' : 'reveal-right'}`}
               >
                 <div className="p-8 lg:p-10">
                   <div className="flex flex-col lg:flex-row lg:items-start gap-8">
@@ -249,6 +252,7 @@ export default function ServicesPage() {
             Reach out and our team will guide you to the right program. All consultations are confidential.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* WhatsApp CTA — disabled until number is confirmed
             <a
               href={WA_HREF}
               target="_blank"
@@ -259,6 +263,7 @@ export default function ServicesPage() {
               <WaIcon />
               Ask via WhatsApp
             </a>
+            */}
             <Link href="/contact" className="btn-primary btn-navy">
               Send Us a Message <ArrowRight size={16} />
             </Link>

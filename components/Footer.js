@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Phone, Mail, MapPin } from 'lucide-react'
+import { Mail, MapPin } from 'lucide-react'
 
 const services = [
   'Drug & Substance Rehabilitation',
@@ -90,14 +90,11 @@ export default function Footer() {
             <h4 className="font-display text-white font-semibold mb-5 text-base">Get In Touch</h4>
             <ul className="space-y-4 mb-6">
               <li className="flex items-start gap-3">
-                <Phone size={15} className="text-[#2D9E8E] mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-sm text-white/40">+254 725 475 443</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
                 <Mail size={15} className="text-[#2D9E8E] mt-0.5 flex-shrink-0" />
-                <p className="text-sm text-white/40">info@hillanichealthcare.com</p>
+                <div>
+                  <p className="text-sm text-white/40">hillanichealthcare@gmail.com</p>
+                  <p className="text-sm text-white/40">info@hillanichealthcare.com</p>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={15} className="text-[#2D9E8E] mt-0.5 flex-shrink-0" />
@@ -105,6 +102,7 @@ export default function Footer() {
               </li>
             </ul>
 
+            {/* WhatsApp button — disabled until number is confirmed
             <a
               href="https://wa.me/254725475443?text=Hello%20Hillanic%20Health%20Care%2C%20I%20would%20like%20to%20book%20a%20consultation."
               target="_blank"
@@ -114,6 +112,7 @@ export default function Footer() {
               <WaIcon />
               WhatsApp Us
             </a>
+            */}
           </div>
         </div>
       </div>

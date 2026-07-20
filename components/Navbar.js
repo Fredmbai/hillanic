@@ -102,7 +102,7 @@ export default function Navbar() {
             )
           })}
 
-          {/* CTA */}
+          {/* CTA — disabled until number is confirmed
           <a
             href={WA_HREF}
             target="_blank"
@@ -115,6 +115,7 @@ export default function Navbar() {
           >
             Book Consultation
           </a>
+          */}
         </nav>
 
         {/* Mobile hamburger */}
@@ -149,6 +150,7 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
+          {/* Mobile CTA — disabled until number is confirmed
           <a
             href={WA_HREF}
             target="_blank"
@@ -157,6 +159,7 @@ export default function Navbar() {
           >
             Book Consultation via WhatsApp
           </a>
+          */}
         </nav>
       </div>
     </header>

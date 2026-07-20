@@ -26,24 +26,27 @@ export const metadata = {
   metadataBase: new URL(BASE_URL),
 
   title: {
-    default: 'Hillanic Health Care | Rehabilitation & Mental Health Kenya',
+    default: 'Hillanic Health Care | Rehabilitation Center & Mental Health Kenya',
     template: '%s | Hillanic Health Care',
   },
 
   description:
-    'Hillanic Health Care Ltd provides compassionate, evidence-based rehabilitation, mental health care, counseling, and psychosocial support in Nairobi, Kenya. Restoring hope, rebuilding lives.',
+    'Hillanic Health Care (Hillanic Healthcare) is a rehabilitation center and mental health care provider in Nairobi, Kenya, offering drug rehabilitation, counseling, and psychosocial support. Restoring hope, rebuilding lives.',
 
   keywords: [
-    'rehabilitation Kenya',
-    'mental health Kenya',
-    'drug rehabilitation Nairobi',
-    'substance abuse treatment Kenya',
-    'counseling Nairobi',
+    'Hillanic',
+    'Hillanic Health Care',
+    'Hillanic Healthcare',
+    'rehabilitation center Kenya',
+    'rehabilitation center',
+    'mental health care Kenya',
+    'drug rehabilitation Kenya',
+    'mental health',
+    'mental health hospital Kenya',
+    'counseling services Nairobi',
     'psychosocial support Kenya',
     'addiction recovery Kenya',
     'mental health clinic Nairobi',
-    'rehab center Kenya',
-    'Hillanic Health Care',
   ],
 
   authors: [{ name: 'Hillanic Health Care Ltd', url: BASE_URL }],
@@ -65,38 +68,70 @@ export const metadata = {
     locale: 'en_KE',
     url: BASE_URL,
     siteName: 'Hillanic Health Care Ltd',
-    title: 'Hillanic Health Care | Rehabilitation & Mental Health Kenya',
+    title: 'Hillanic Health Care | Rehabilitation Center & Mental Health Kenya',
     description:
-      'Compassionate rehabilitation, mental health care, counseling, and psychosocial support in Nairobi, Kenya.',
+      'Compassionate rehabilitation center and mental health care, counseling, and psychosocial support in Nairobi, Kenya.',
     images: [
       {
         url: '/home_hero.webp',
         width: 1200,
         height: 630,
-        alt: 'Hillanic Health Care — Rehabilitation & Mental Health Kenya',
+        alt: 'Hillanic Health Care — Rehabilitation Center & Mental Health Kenya',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Hillanic Health Care | Rehabilitation & Mental Health Kenya',
+    title: 'Hillanic Health Care | Rehabilitation Center & Mental Health Kenya',
     description:
-      'Compassionate rehabilitation, mental health care, counseling, and psychosocial support in Nairobi, Kenya.',
+      'Compassionate rehabilitation center and mental health care, counseling, and psychosocial support in Nairobi, Kenya.',
     images: ['/home_hero.webp'],
   },
+}
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalBusiness',
+  name: 'Hillanic Health Care',
+  alternateName: ['Hillanic', 'Hillanic Healthcare', 'Hillanic Health Care Ltd'],
+  url: BASE_URL,
+  logo: `${BASE_URL}/logo_hillanic.svg`,
+  image: `${BASE_URL}/home_hero.webp`,
+  description:
+    'Hillanic Health Care is a registered rehabilitation center and mental health care provider in Nairobi, Kenya, offering drug rehabilitation, counseling, community outreach, and psychosocial support.',
+  email: 'hillanichealthcare@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Nairobi',
+    addressCountry: 'KE',
+  },
+  areaServed: 'Kenya',
+  medicalSpecialty: ['Mental Health', 'Addiction', 'Psychiatric'],
+  knowsAbout: [
+    'Drug & Substance Abuse Rehabilitation',
+    'Mental Health Care',
+    'Counseling & Psychosocial Support',
+    'Community Outreach & Awareness',
+    'Youth & Adolescent Programs',
+    'Home-Based & Aftercare Services',
+  ],
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <ScrollProgress />
         <ScrollReveal />
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <WhatsAppButton />
+        {/* <WhatsAppButton /> — disabled until number is confirmed */}
       </body>
     </html>
   )

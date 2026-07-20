@@ -5,26 +5,30 @@ import CountUp from '@/components/CountUp'
 
 export const metadata = {
   title: {
-    absolute: 'Hillanic Health Care | Rehabilitation & Mental Health Kenya',
+    absolute: 'Hillanic Health Care | Rehabilitation Center & Mental Health Kenya',
   },
   description:
-    'Hillanic Health Care Ltd provides compassionate, evidence-based rehabilitation, mental health care, counseling, and psychosocial support in Nairobi, Kenya. Book a confidential consultation today.',
+    'Hillanic Health Care (Hillanic Healthcare) provides compassionate, evidence-based rehabilitation, mental health care, counseling, and psychosocial support in Nairobi, Kenya. Book a confidential consultation today.',
   keywords: [
-    'rehabilitation Kenya',
-    'mental health Kenya',
-    'drug rehab Nairobi',
-    'counseling services Kenya',
-    'substance abuse treatment',
+    'Hillanic',
+    'Hillanic Health Care',
+    'Hillanic Healthcare',
+    'rehabilitation center Kenya',
+    'rehabilitation center',
+    'mental health care Kenya',
+    'drug rehabilitation Kenya',
+    'mental health',
+    'mental health hospital Kenya',
+    'counseling services Nairobi',
     'psychosocial support Kenya',
     'addiction recovery Kenya',
-    'mental health clinic Nairobi',
   ],
   alternates: { canonical: 'https://hillanic.co.ke' },
   openGraph: {
     url: 'https://hillanic.co.ke',
-    title: 'Hillanic Health Care | Rehabilitation & Mental Health Kenya',
+    title: 'Hillanic Health Care | Rehabilitation Center & Mental Health Kenya',
     description:
-      'Compassionate rehabilitation, mental health care, and psychosocial support in Nairobi, Kenya. Restoring hope, rebuilding lives.',
+      'Compassionate rehabilitation center, mental health care, and psychosocial support in Nairobi, Kenya. Restoring hope, rebuilding lives.',
     images: [{ url: '/home_hero.webp', width: 1200, height: 630, alt: 'Hillanic Health Care' }],
   },
 }
@@ -39,12 +43,12 @@ const WaIcon = ({ size = 18 }) => (
 )
 
 const services = [
-  { icon: '🧠', title: 'Mental Health Care',    desc: 'Comprehensive psychological support for depression, anxiety, trauma, and emotional wellbeing.' },
-  { icon: '🌿', title: 'Rehabilitation',         desc: "Structured recovery programs for drug and substance addiction with relapse prevention." },
-  { icon: '🤝', title: 'Counseling & Support',   desc: "Individual, family, and group therapy sessions to navigate life's most challenging moments." },
-  { icon: '🌟', title: 'Youth Programs',          desc: 'Specialized adolescent support addressing behavioral challenges, peer pressure, and emotional growth.' },
-  { icon: '🏘️', title: 'Community Outreach',    desc: 'Awareness campaigns and preventive education empowering communities across Kenya.' },
-  { icon: '🏠', title: 'Aftercare Services',      desc: "Continued home-based support and recovery coaching for lasting long-term wellness." },
+  { id: 'mental-health',  icon: '🧠', title: 'Mental Health Care',    desc: 'Comprehensive psychological support for depression, anxiety, trauma, and emotional wellbeing.' },
+  { id: 'rehabilitation', icon: '🌿', title: 'Rehabilitation',         desc: "Structured recovery programs for drug and substance addiction with relapse prevention." },
+  { id: 'counseling',     icon: '🤝', title: 'Counseling & Support',   desc: "Individual, family, and group therapy sessions to navigate life's most challenging moments." },
+  { id: 'youth',          icon: '🌟', title: 'Youth Programs',          desc: 'Specialized adolescent support addressing behavioral challenges, peer pressure, and emotional growth.' },
+  { id: 'community',      icon: '🏘️', title: 'Community Outreach',    desc: 'Awareness campaigns and preventive education empowering communities across Kenya.' },
+  { id: 'aftercare',      icon: '🏠', title: 'Aftercare Services',      desc: "Continued home-based support and recovery coaching for lasting long-term wellness." },
 ]
 
 const values = [
@@ -66,7 +70,7 @@ export default function HomePage() {
     <>
       {/* ===== HERO ===== */}
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-        <Image src="/home_hero.webp" fill className="object-cover object-center" priority sizes="100vw" alt="" />
+        <Image src="/home_hero.webp" fill className="object-cover object-center" priority sizes="100vw" alt="Hillanic Health Care rehabilitation center and mental health care in Nairobi, Kenya" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0D2D42]/95 via-[#1A4A6A]/85 to-[#0D2D42]/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0D2D42]/80 via-transparent to-transparent" />
 
@@ -101,9 +105,11 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-200">
+            {/* WhatsApp CTA — disabled until number is confirmed
             <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="btn-primary">
               <WaIcon size={18} /> Book via WhatsApp
             </a>
+            */}
             <Link href="/services" className="btn-outline">Explore Services</Link>
           </div>
 
@@ -170,26 +176,26 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4" data-stagger>
-              {services.slice(0, 3).map(({ icon, title, desc }) => (
-                <div key={title} className="bg-white rounded-2xl border border-[#E2EBF0] p-5 card-hover border-hover group reveal">
+              {services.slice(0, 3).map(({ id, icon, title, desc }) => (
+                <Link key={id} href={`/services#${id}`} className="block bg-white rounded-2xl border border-[#E2EBF0] p-5 card-hover border-hover group reveal">
                   <div className="w-10 h-10 bg-[#EAF5F2] rounded-xl flex items-center justify-center text-xl mb-3">{icon}</div>
                   <h3 className="font-display text-base font-semibold text-[#2C2C2C] mb-2 group-hover:text-[#1A4A6A] transition-colors leading-snug">{title}</h3>
                   <p className="text-xs text-[#5A6B7A] font-body leading-relaxed mb-3">{desc}</p>
                   <p className="text-[#2D9E8E] text-xs font-semibold font-body opacity-0 group-hover:opacity-100 transition-opacity">Learn more &rarr;</p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
 
           {/* Bottom row — 3 cards stagger in */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger>
-            {services.slice(3).map(({ icon, title, desc }) => (
-              <div key={title} className="bg-white rounded-2xl border border-[#E2EBF0] p-6 card-hover border-hover group reveal">
+            {services.slice(3).map(({ id, icon, title, desc }) => (
+              <Link key={id} href={`/services#${id}`} className="block bg-white rounded-2xl border border-[#E2EBF0] p-6 card-hover border-hover group reveal">
                 <div className="w-10 h-10 bg-[#EAF5F2] rounded-xl flex items-center justify-center text-xl mb-3">{icon}</div>
                 <h3 className="font-display text-lg font-semibold text-[#2C2C2C] mb-2 group-hover:text-[#1A4A6A] transition-colors">{title}</h3>
                 <p className="text-sm text-[#5A6B7A] font-body leading-relaxed mb-3">{desc}</p>
                 <p className="text-[#2D9E8E] text-sm font-semibold font-body opacity-0 group-hover:opacity-100 transition-opacity">Learn more &rarr;</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -291,6 +297,7 @@ export default function HomePage() {
                 and expertise. Reach out today — a consultation is the first step toward healing.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                {/* WhatsApp CTA — disabled until number is confirmed
                 <a
                   href={WA_HREF}
                   target="_blank"
@@ -300,6 +307,7 @@ export default function HomePage() {
                 >
                   <WaIcon size={18} /> Book via WhatsApp
                 </a>
+                */}
                 <Link href="/contact" className="btn-outline">Contact Us</Link>
               </div>
             </div>

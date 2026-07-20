@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 const WA_HREF =
   'https://wa.me/254725475443?text=Hello%20Hillanic%20Health%20Care%2C%20I%20would%20like%20to%20book%20a%20consultation.'
@@ -20,14 +20,9 @@ const services = [
 
 const contactInfo = [
   {
-    icon: <Phone size={18} />,
-    label: 'Phone',
-    lines: ['+254 725 475 443'],
-  },
-  {
     icon: <Mail size={18} />,
     label: 'Email',
-    lines: ['info@hillanichealthcare.com'],
+    lines: ['hillanichealthcare@gmail.com', 'info@hillanichealthcare.com'],
   },
   {
     icon: <MapPin size={18} />,
@@ -118,7 +113,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="font-display text-2xl font-semibold text-[#2C2C2C] mb-2">Get in Touch</h2>
                 <p className="text-[#5A6B7A] font-body text-sm leading-relaxed">
-                  Fill in the form and we'll respond within 24 hours. For a faster response, reach us on WhatsApp.
+                  Fill in the form and we'll respond within 24 hours, or reach us directly by email.
                 </p>
               </div>
 
@@ -144,7 +139,7 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* WhatsApp CTA card */}
+              {/* WhatsApp CTA card — disabled until number is confirmed
               <div className="bg-gradient-to-br from-[#0D2D42] to-[#1A4A6A] rounded-2xl p-6 text-center">
                 <p className="text-white/60 font-body text-sm mb-2">Prefer a quicker response?</p>
                 <p className="font-display text-xl font-semibold text-white mb-4">Book via WhatsApp</p>
@@ -158,6 +153,7 @@ export default function ContactPage() {
                   Start WhatsApp Chat
                 </a>
               </div>
+              */}
             </div>
 
             {/* ---- RIGHT: Contact form ---- */}
