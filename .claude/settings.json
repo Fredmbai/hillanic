@@ -3,7 +3,23 @@
     "allow": [
       "Bash(npm run *)",
       "Bash(curl -s http://localhost:3000/contact)",
-      "Bash(pkill -f \"next dev\")"
+      "Bash(pkill -f \"next dev\")",
+      "Bash(chromium-cli --help)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(node -e \"require.resolve\\('playwright'\\)\")",
+      "Bash(node -e \"require.resolve\\('puppeteer'\\)\")",
+      "Bash(mkdir -p /tmp/navshots)",
+      "Bash(google-chrome --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,900 --screenshot=/tmp/navshots/home-desktop.png http://localhost:3000/)",
+      "Bash(google-chrome --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=375,812 --screenshot=/tmp/navshots/home-mobile.png http://localhost:3000/)",
+      "Bash(google-chrome --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,900 --screenshot=/tmp/navshots/about-desktop.png http://localhost:3000/about)",
+      "Bash(google-chrome --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=375,812 --screenshot=/tmp/navshots/about-mobile.png http://localhost:3000/about)",
+      "Read(//tmp/**)",
+      "Read(//tmp/navshots/**)",
+      "Bash(python3 -c \"from PIL import Image; print\\('PIL available'\\)\")",
+      "Bash(convert home-desktop.png -crop 500x120+0+0 home-desktop-crop.png)",
+      "Bash(convert home-mobile.png -crop 375x120+0+0 home-mobile-crop.png)",
+      "Bash(convert about-desktop.png -crop 500x120+0+0 about-desktop-crop.png)",
+      "Bash(convert about-mobile.png -crop 375x120+0+0 about-mobile-crop.png)"
     ]
   }
 }

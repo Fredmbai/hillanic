@@ -40,11 +40,11 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-[68px]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className={`relative w-11 h-11 rounded-full p-[2px] group-hover:scale-105 transition-transform flex-shrink-0 ${
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className={`relative w-[60px] h-[60px] sm:w-[68px] sm:h-[68px] rounded-full p-1 group-hover:scale-105 transition-transform flex-shrink-0 ${
             onWhite
               ? 'bg-gradient-to-br from-[#2D9E8E] to-[#1A4A6A] shadow-[0_2px_14px_rgba(45,158,142,0.4)]'
               : 'bg-gradient-to-br from-white/70 to-white/30 shadow-[0_2px_14px_rgba(0,0,0,0.25)]'
@@ -53,23 +53,23 @@ export default function Navbar() {
               <Image
                 src="/logo_hillanic.svg"
                 alt="Hillanic Health Care"
-                width={32}
-                height={32}
-                className="w-8 h-8 object-contain"
+                width={50}
+                height={50}
+                className="w-11 h-11 sm:w-[50px] sm:h-[50px] object-contain"
                 priority
               />
             </div>
           </div>
           <div className="flex flex-col leading-none">
             <span
-              className={`font-display font-semibold text-lg leading-tight transition-colors ${
+              className={`font-display font-semibold text-xl leading-tight transition-colors ${
                 onWhite ? 'text-[#1A4A6A]' : 'text-white'
               }`}
             >
               Hillanic
             </span>
             <span
-              className={`text-[9px] tracking-[0.18em] uppercase font-body transition-colors ${
+              className={`text-[10px] tracking-[0.18em] uppercase font-body transition-colors ${
                 onWhite ? 'text-[#2D9E8E]' : 'text-[#7DCFC6]'
               }`}
             >
