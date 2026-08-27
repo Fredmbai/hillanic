@@ -107,7 +107,7 @@ export async function POST(request) {
               If your matter is urgent, please reach us directly via WhatsApp for a faster response:
             </p>
             <div style="text-align: center; margin: 24px 0;">
-              <a href="https://wa.me/254725475443" style="display: inline-block; background: #25D366; color: white; font-size: 15px; font-weight: bold; padding: 14px 32px; border-radius: 50px; text-decoration: none;">
+              <a href="https://wa.me/254791959332" style="display: inline-block; background: #25D366; color: white; font-size: 15px; font-weight: bold; padding: 14px 32px; border-radius: 50px; text-decoration: none;">
                 Chat on WhatsApp
               </a>
             </div>

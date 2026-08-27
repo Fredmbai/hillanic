@@ -2,10 +2,10 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 const WA_HREF =
-  'https://wa.me/254725475443?text=Hello%20Hillanic%20Health%20Care%2C%20I%20would%20like%20to%20book%20a%20consultation.'
+  'https://wa.me/254791959332?text=Hello%20Hillanic%20Health%20Care%2C%20I%20would%20like%20to%20book%20a%20consultation.'
 
 const services = [
   'Drug & Substance Abuse Rehabilitation',
@@ -19,6 +19,11 @@ const services = [
 ]
 
 const contactInfo = [
+  {
+    icon: <Phone size={18} />,
+    label: 'Phone',
+    lines: ['+254 791 959 332'],
+  },
   {
     icon: <Mail size={18} />,
     label: 'Email',

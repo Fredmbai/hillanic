@@ -131,7 +131,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
-        {/* <WhatsAppButton /> — disabled until number is confirmed */}
+        <WhatsAppButton />
       </body>
     </html>
   )

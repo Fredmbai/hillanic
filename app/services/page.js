@@ -39,7 +39,7 @@ export const metadata = {
 }
 
 const WA_HREF =
-  'https://wa.me/254725475443?text=Hello%20Hillanic%20Health%20Care%2C%20I%20would%20like%20to%20enquire%20about%20your%20services.'
+  'https://wa.me/254791959332?text=Hello%20Hillanic%20Health%20Care%2C%20I%20would%20like%20to%20enquire%20about%20your%20services.'
 
 const WaIcon = () => (
   <svg viewBox="0 0 24 24" fill="white" width="18" height="18" aria-hidden="true">

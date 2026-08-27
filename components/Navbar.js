@@ -14,7 +14,7 @@ const navLinks = [
 ]
 
 const WA_HREF =
-  'https://wa.me/254725475443?text=Hello%20Hillanic%20Health%20Care%2C%20I%20would%20like%20to%20book%20a%20consultation.'
+  'https://wa.me/254791959332?text=Hello%20Hillanic%20Health%20Care%2C%20I%20would%20like%20to%20book%20a%20consultation.'
 
 export default function Navbar() {
   const [open, setOpen]         = useState(false)
